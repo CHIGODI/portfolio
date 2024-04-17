@@ -136,9 +136,13 @@ nav ul li a:hover::after {
     font-size: 24px;
     padding: 10px;
 }
+.title{
+    height: 3.5em;
+}
 .header-text #title{
     color: #31304D;
     font-size: 40px;
+    
 }
 
 .header-text h1 span {
@@ -689,4 +693,12 @@ nav .fa-solid {
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+
+.container-try{
+    height: 100vh;
+    background-color: red;
+    width: 1000px;
+    margin: auto auto;
+    text-align: center;
 }

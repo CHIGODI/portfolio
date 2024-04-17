@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import TypingAnimation from "../components/TypingAnimation";
+
 const Nav = () => {
     return (
         <div id="header">
@@ -22,7 +24,7 @@ const Nav = () => {
                 </nav>
                 <div class="header-text">
                     <h1>Hi, I'm Chigodi</h1>
-                    <p id="title">Software Engineer</p>
+                    <TypingAnimation dataText={['Software Engineer', 'DevOps Engineer']} />
                     <p>Passionate about crafting<br /> innovative solutions</p>
                     <ScrollLink to="portfolio"><button className="cv">Explore Projects</button></ScrollLink>
                     <div className="action-icons">
