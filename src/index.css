@@ -15,12 +15,14 @@ body {
 
 #header {
     margin: auto auto;
-    width: 80%;
+    width: 1000px;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
 #header::before{
     content: '';
     background-color: purple;
@@ -29,13 +31,11 @@ body {
 
 .navigation {
     width: 100%;
-    position: relative;
-  
 }
 
 .navigation nav{
     margin: 0 auto;
-    width: 80%;
+    width: 1000px;
     height: 70px;
     display: flex;
     align-items: center;
@@ -47,7 +47,7 @@ body {
     border-bottom: 1px solid #DDDDDD;
 }
 
-.container {
+#contact .container {
     padding: 10px 10%;
 }
 
@@ -62,7 +62,7 @@ body {
 nav ul li {
     display: inline-block;
     list-style: none;
-    margin: 10px 20px;
+    margin: 10px 10px;
 }
 
 nav ul li a {
@@ -91,14 +91,40 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    font-size: 30px;
     margin: auto auto;
-    width: 50%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+.action-icons{
+    position: absolute;
+    width: 10%;
+    height: 100%;
+    left: 0;
+    border-radius: 16px;
+    opacity: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+.header-icons{
+    font-size: 24px;
+    color: #555555;
+}
+.header-icons:hover{
+    color: purple;
+    cursor: pointer;
+}
+.header-icons:active{
+    z-index: 2px;
+}
+
 
 .header-text h1 {
     font-size: 60px;
@@ -112,7 +138,7 @@ nav ul li a:hover::after {
 }
 .header-text #title{
     color: #31304D;
-    font-size: 36px;
+    font-size: 40px;
 }
 
 .header-text h1 span {
@@ -136,11 +162,13 @@ nav ul li a:hover::after {
 
 /***------------****/
 #about {
-    padding: 80px 0;
     color: #555555;
+    width: 1000px; 
+    margin: auto auto;
 }
+
 #about h1{
-    color: #161A30;
+    color: #31304D;
     padding: 10px;
 }
 #about p {
@@ -178,6 +206,16 @@ nav ul li a:hover::after {
     display: flex;
     margin: 20px 0 0px;
 }
+#about .tab-links{
+    color: #31304D;
+}
+
+.tab-contents{
+    height: 40%;
+    width: 100%;
+    position: relative;
+
+}
 
 .tab-contents ul li {
     padding: 0 10px;
@@ -189,11 +227,86 @@ nav ul li a:hover::after {
     font-weight: 400px;
 }
 
-#services {
-    padding: 30px 0;
-    color: #ababab;
-
+#projects {
+    width: 1000px;
+    height: 100vh;
+    margin: 124px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    position: relative;
 }
+#projects .container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 24px;
+    margin-top: 124px;
+}
+#projects h2{
+    color: #31304D;
+    font-size: 36px;
+    position: absolute;
+    top: 0;
+    left: 44%;
+}
+#sub-title-desc{
+    position: absolute;
+    left: 36%;
+    top: 8%;
+    color: #555555;
+}
+
+.tools, .languages{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.ln-title{
+    height: 12vh;
+    width: 80%;
+}
+.ln-title h3 {
+    color: #31304D;
+    font-size: 22px;
+}
+.ln-title p{
+    padding: 10px 0  10px 0;
+    color: #555555;
+}
+
+#ln-tiles{
+    height: 10vh;
+    width: 68%;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+#ln-tiles h4{
+    color: #31304D;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#ln-tiles::after{
+    content: '';
+    background-color: purple;
+    position: absolute;
+    bottom: 0;
+    border-radius: 16px;
+    height: 4px;
+    width: 100%;
+}
+
+.ln-icons{
+    font-size: 36px;
+}
+
 
 .services-list {
     display: grid;
@@ -237,9 +350,22 @@ nav ul li a:hover::after {
 
 /*-----portfolio---*/
 #portfolio {
-    padding: 50px 0;
+    width: 1000px;
+    margin: 124px auto 124px auto;
 }
 
+#portfolio h1{
+    padding-top: 20px;
+    color: #31304D;
+    font-size: 36px;
+    text-align: center;
+
+}
+#portfolio p{
+    text-align: center;
+    color: #555555;
+    padding-top: 12px;
+}
 .work-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -418,38 +544,77 @@ nav .fa-solid {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
-    /* #header {
-        background-image: url(images/Background.jpg);
-    } */
-    #header{
+@media only screen and (max-width: 768px) {
+    #header,
+    #about,
+    #projects,
+    #portfolio,
+    #contact,
+    #copyright
+    {
+        width: 100vw;
         margin: auto auto;
+    }
+    .action-icons{
+        display: none;
     }
     .navigation nav{
         display: none;
     }
-    .navigation{
-        display: flex;
-        justify-content: center;
-    }
     .header-text {
         display: flex;
         justify-content: center;
-        width: 500px;
-        margin: 0;
+        width: 100vw;
         font-size: 16px;
     }
     .header-text p{
         margin: 0;
-        font-size: 18px;
-     }
-     .header-text #title{
-        font-size: 24px;
-     }
-
+        font-size: 20px;
+    }
     .header-text h1 {
+        font-size: 48px;
+    }
+    .header-text #title{
         font-size: 32px;
     }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+    #projects .container{
+        display: flex;
+        flex-wrap: wrap;
+        height: fit-content;
+    }
+    .languages,
+    .tools{
+        flex-basis: 100%;
+    }
+
+    #portfolio{
+        margin-top: 400px;
+    }
+
+
+    /* 
+    .navigation{
+        display: flex;
+        justify-content: center;
+    }
+   
+   
+   
+
+   
 
     nav .fa-solid {
         display: block;
@@ -483,18 +648,7 @@ nav .fa-solid {
         font-size: 40px;
     }
 
-    .about-col-1,
-    .about-col-2 {
-        flex-basis: 100%;
-    }
-
-    .about-col-1 {
-        margin-bottom: 30px;
-    }
-
-    .about-col-2 {
-        font-size: 14px;
-    }
+    
 
     .tab-links {
         font-size: 16px;
@@ -510,6 +664,24 @@ nav .fa-solid {
         font-size: 14px;
         color: white;
     }
+    #projects{
+        max-width: 1000px;
+        background-color: purple;
+        height: 100%;
+      
+    } */
+    /* #projects .container{
+        background-color: red;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .languages,
+    .tools{
+        flex-basis: 100%;
+        background-color: yellow;
+        width: 100%;
+    } */
 }
 
 /*------*/

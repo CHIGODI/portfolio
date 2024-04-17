@@ -1,6 +1,9 @@
 import React from "react";
 import ScrollLink from "../ScrollLink";
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 const Nav = () => {
     return (
         <div id="header">
@@ -11,17 +14,23 @@ const Nav = () => {
                         <li><a href="#header" services>Home</a></li>
                         <li><ScrollLink to="about">About</ScrollLink></li>
                         <li><ScrollLink to="portfolio">Projects</ScrollLink></li>
-                        <li><ScrollLink to="services">Skills</ScrollLink></li>
+                        <li><ScrollLink to="projects">Skills</ScrollLink></li>
                         <li><ScrollLink to="contact">Contact</ScrollLink></li>
                         <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
                     </ul>
                     <i class="fa-solid fa-bars" onclick="openMenu()"></i>
                 </nav>
                 <div class="header-text">
-                    <h1>Hi, I'm Chigodi.</h1>
+                    <h1>Hi, I'm Chigodi</h1>
                     <p id="title">Software Engineer</p>
                     <p>Passionate about crafting<br /> innovative solutions</p>
-                    <button className="cv">Download CV</button>
+                    <ScrollLink to="portfolio"><button className="cv">Explore Projects</button></ScrollLink>
+                    <div className="action-icons">
+                        <a href="mailto:chiegody254@gmail.com"><FontAwesomeIcon icon={faEnvelope} className="header-icons" /></a>
+                        <a href="https://wa.me/+254708051357"><FontAwesomeIcon icon={faWhatsapp} className="header-icons" /></a>
+                        <a href="https://twitter.com/Chigow2"><FontAwesomeIcon icon={faTwitter} className="header-icons" /></a>
+                        <a href="https://www.linkedin.com/in/chigowdev/"><FontAwesomeIcon icon={faLinkedin} className="header-icons" /></a>
+                    </div>
                 </div>
             </div>
         </div>

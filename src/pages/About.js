@@ -24,8 +24,8 @@ const About = () => {
                 </div>
                 <div class="tab-contents" id="education">
                     <ul>
-                        <li><span>2018-2022</span><br />Jomo Kenyatta University of Agriculture and Technology</li>
-                        <li><span>2023-2024</span><br />Alx Afirca</li>
+                        <li><span>2018 - 2022</span><br />Jomo Kenyatta University of Agriculture and Technology</li>
+                        <li><span>2023 - 2024</span><br />Alx Africa</li>
                     </ul>
                 </div> 
             </div>
