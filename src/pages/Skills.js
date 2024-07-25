@@ -6,13 +6,13 @@ import { faCode } from '@fortawesome/free-solid-svg-icons'
 const Skills = () => {
     return (
         <div id="projects">
+            <h2 class="sub-title">Skills</h2>
+            <p id="sub-title-desc">My Technical Skills, Languages and Tools</p>
             <div class="container">
-                <h2 class="sub-title">Skills</h2>
-                <p id="sub-title-desc">My Technical Skills, Languages and Tools</p>
                 <div className="languages">
                     <div className="ln-title">
-                        <h3>Languages</h3>
-                        <p>Tech stack that I utilise</p>
+                        <h3 className="text-start">Languages</h3>
+                        <p className="text-start">Tech stack that I utilise</p>
                     </div>
                     <div id="ln-tiles">
                         <FontAwesomeIcon icon={faHtml5} className="ln-icons" />
@@ -37,8 +37,8 @@ const Skills = () => {
                 </div>
                 <div className="tools">
                     <div className="ln-title">
-                        <h3>Tools</h3>
-                        <p>Tools that I know and use daily</p>
+                        <h3 className="text-end" style={{ color: "#31304D" }}>Tools</h3>
+                        <p className="text-end" style={{ color: "#555555" }}>Tools that I know and use daily</p>
                     </div>
                     <div id="ln-tiles">
                         <h4>VS Code</h4>
@@ -56,7 +56,7 @@ const Skills = () => {
                         <h4>Github</h4>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     );
