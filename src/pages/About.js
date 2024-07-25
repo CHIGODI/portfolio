@@ -11,14 +11,7 @@ const About = () => {
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Hello there!, I'm Antony Aboud, a passionate web developer with a diverse 
-                    skill set spanning various technologies. My playground is the internet,
-                    and I revel in the art of crafting immersive online experiences. 
-                    Whether it's breathing life into the front-end or orchestrating the magic
-                    behind the scenes, I am driven by a relentless desire to innovate and transform 
-                    ideas into tangible realities. Join me, Antony Aboud, on this digital adventure,
-                    where every line of code weaves a story, and each project is a testament to the
-                    endless possibilities of the online realm. Let's code the future together!</p>
+                        <p>Hey there, I'm Chigodi Antony, a software engineer passionate about making waves from Kenya. I'm all about using tech to tackle everyday challenges head-on. Whether it's jazzing up websites with HTML, CSS, and jQuery, or crafting robust backends with Flask, Python, and Node.js, I'm your go-to person. Plus, I'm no stranger to databases like MySQL and NoSQL. Lately, I've been diving into the world of React, adding that extra oomph to my front-end game. And when it comes to keeping things shipshape, you can count on me with my DevOps skills, especially Docker. I'm a firm believer in the Agile way of working, ensuring we stay nimble and deliver results. Let's team up and make some tech magic happen!</p>
                 <div class="tab-titles">
                     <p class="tab-links">Education</p>
                 </div>
@@ -27,9 +20,9 @@ const About = () => {
                         <li><span>2018 - 2022</span><br />Jomo Kenyatta University of Agriculture and Technology</li>
                         <li><span>2023 - 2024</span><br />Alx Africa</li>
                     </ul>
-                </div> 
+                </div>
             </div>
-          </div>  
+          </div>
         </div>
     </div>
     );

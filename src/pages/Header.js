@@ -9,22 +9,29 @@ import TypingAnimation from "../components/TypingAnimation";
 const Nav = () => {
     return (
         <div id="header">
+            <button class="cv" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><FontAwesomeIcon icon="fa-solid fa-bars" /></button>
             <div class="navigation">
                 <nav>
                     <h1 class="logo">ChigowDEV</h1>
-                    <ul id="side-menu">
-                        <li><a href="#header" services>Home</a></li>
-                        <li><ScrollLink to="about">About</ScrollLink></li>
-                        <li><ScrollLink to="portfolio">Projects</ScrollLink></li>
-                        <li><ScrollLink to="projects">Skills</ScrollLink></li>
-                        <li><ScrollLink to="contact">Contact</ScrollLink></li>
-                        <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
-                    </ul>
-                    <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+                    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                        <div class="offcanvas-header">
+                            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Menu</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul id="side-menu">
+                                <li><a href="#header">Home</a></li>
+                                <li><ScrollLink to="about">About</ScrollLink></li>
+                                <li><ScrollLink to="portfolio">Projects</ScrollLink></li>
+                                <li><ScrollLink to="projects">Skills</ScrollLink></li>
+                                <li><ScrollLink to="contact">Contact</ScrollLink></li>
+                            </ul>
+                        </div>
+                    </div>
                 </nav>
                 <div class="header-text">
                     <h1>Hi, I'm Chigodi</h1>
-                    <TypingAnimation dataText={['Software Engineer', 'DevOps Engineer']} />
+                    <TypingAnimation dataText={['Software Engineer']} />
                     <p>Passionate about crafting<br /> innovative solutions</p>
                     <ScrollLink to="portfolio"><button className="cv">Explore Projects</button></ScrollLink>
                     <div className="action-icons">
