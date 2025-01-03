@@ -6,16 +6,30 @@ import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import TypingAnimation from "../components/TypingAnimation";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
     const toggleMenu = () => {
         setShowMenu((prevState) => !prevState);
     };
 
     const hideMenu = () => {
         setShowMenu(false);
-    }
+    };
+
+    const toggleTheme = () => {
+        const newTheme = theme === "light" ? "dark" : "light";
+        setTheme(newTheme);
+        localStorage.setItem("theme", newTheme);
+    };
+
+    useEffect(() => {
+        document.documentElement.setAttribute("data-theme", theme);
+    }, [theme]);
+
     return (
         <div id="header">
             <div className="navigation">
@@ -25,20 +39,22 @@ const Nav = () => {
                         <FontAwesomeIcon icon={faBars} className="menu-bars" onClick={toggleMenu} />
                     </div>
                     <ul id="menu" className={showMenu ? "show" : "hide"}>
-                        {console.log(showMenu)}
                         <FontAwesomeIcon icon={faX} className="cancel" onClick={hideMenu} />
-                        <li><ScrollLink to="header">HOME</ScrollLink></li>
-                        <li><ScrollLink to="about">ABOUT</ScrollLink></li>
-                        <li><ScrollLink to="portfolio">PROJECTS</ScrollLink></li>
-                        <li><ScrollLink to="projects">SKILLS</ScrollLink></li>
-                        <li><ScrollLink to="contact">CONTACT</ScrollLink></li>
+                        <li onClick={hideMenu}><ScrollLink to="header">HOME</ScrollLink></li>
+                        <li onClick={hideMenu}><ScrollLink to="about">ABOUT</ScrollLink></li>
+                        <li onClick={hideMenu}><ScrollLink to="portfolio">PROJECTS</ScrollLink></li>
+                        <li onClick={hideMenu}><ScrollLink to="projects">SKILLS</ScrollLink></li>
+                        <li onClick={hideMenu}><ScrollLink to="contact">CONTACT</ScrollLink></li>
+                        <button onClick={toggleTheme} className="theme-toggle">
+                            {theme === "light" ? "🌙" : "☀️"}
+                        </button>
                     </ul>
                 </nav>
                 <div className="header-text">
-                    <h1>Hi, I'm Chigodi</h1>
-                    <TypingAnimation dataText={['Software Engineer', 'IT Support Specialist']} />
+                    <h1>Hi, I'm Antony <span className="wave">👋🏽</span></h1>
+                    <TypingAnimation dataText={['Software Engineer', 'Python Developer ⌨️']} />
                     <p>Passionate about crafting<br /> innovative solutions</p>
-                    <ScrollLink to="portfolio"><button className="cv">Explore Projects</button></ScrollLink>
+                    <ScrollLink to="portfolio"><button className="explore">Explore Projects</button></ScrollLink>
                     <div className="action-icons">
                         <a href="mailto:chiegody254@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faEnvelope} className="header-icons" /></a>
                         <a href="https://wa.me/+254708051357" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp} className="header-icons" /></a>
@@ -49,6 +65,6 @@ const Nav = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Nav;

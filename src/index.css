@@ -1,3 +1,33 @@
+:root {
+    --background-color: #ffffff;
+    --text-color-main: #161A30;
+    --header-background: #f5f5f5;
+    --button-background: purple;
+    --button-text-color: #ffffff;
+}
+
+[data-theme="dark"] {
+    --text-color-main: #ffffff;
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --header-background: #1f1f1f;
+    --button-background: #333333;
+    --button-text-color: #ffffff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button {
+    color: var(--button-text-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,10 +39,8 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    color: purple;
-}
 
+/* -------header--------- */
 #header {
     width: 100vw;
     height: 100vh;
@@ -20,12 +48,6 @@ body {
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-#header::before{
-    content: '';
-    background-color: purple;
-    height: 70px;
 }
 
 .menu-toggle{
@@ -40,7 +62,6 @@ body {
 .cancel{
     font-size: 1.5rem;
     display: none;
-    background-color: yellow;
 }
 #menu{
     margin-bottom: 0;
@@ -61,7 +82,7 @@ body {
 }
 
 #contact .container {
-    padding: 10px 10%;
+    padding: 10px 5%;
 }
 
 .logo {
@@ -113,6 +134,31 @@ nav ul li a:hover::after {
     justify-content: center;
     position: relative;
 }
+
+.explore {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
+.wave {
+  display: inline-block;
+  animation: wave-animation 2s infinite;
+  transform-origin: 70% 70%; /* Set the pivot point for the waving motion */
+}
+
+@keyframes wave-animation {
+  0% { transform: rotate(0deg); }
+  15% { transform: rotate(14deg); }
+  30% { transform: rotate(-8deg); }
+  40% { transform: rotate(14deg); }
+  50% { transform: rotate(-4deg); }
+  60% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
 .action-icons{
     position: absolute;
     width: 10%;
@@ -127,14 +173,19 @@ nav ul li a:hover::after {
     justify-content: space-around;
     padding: 10px;
 }
-.header-icons{
+
+.header-icons {
     font-size: 24px;
     color: #555555;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
-.header-icons:hover{
+
+.header-icons:hover {
     color: purple;
-    cursor: pointer;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
+
 .header-icons:active{
     z-index: 2px;
 }
@@ -143,12 +194,14 @@ nav ul li a:hover::after {
 .header-text h1 {
     font-size: 60px;
     margin-top: 20px;
-    color: #161A30;
+    text-align: center;
+    color: var(--text-color-main)
 }
 .header-text p{
     color: #808080;
     font-size: 24px;
     padding: 10px;
+    text-align: center;
 }
 .title{
     height: 3.5em;
@@ -162,7 +215,7 @@ nav ul li a:hover::after {
 .header-text h1 span {
     color: #ff004f;
 }
-.cv{
+.explore{
     padding: 12px 24px;
     border: none;
     outline: none;
@@ -173,7 +226,7 @@ nav ul li a:hover::after {
     border-radius: 8px;
     margin: 10px auto;
 }
-.header-text .cv:hover{
+.header-text .explore:hover{
     cursor: pointer;
     opacity: 90%;
 }
@@ -591,7 +644,6 @@ nav .fa-solid {
         height: 100vh;
         flex-direction: column;
         transition: all 0.3s ease-in-out;
-        background-color: green;
     }
     .hide{
         display: none !important;
