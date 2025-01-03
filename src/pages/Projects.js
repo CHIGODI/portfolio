@@ -29,7 +29,7 @@ const Projects = () => {
                                 process for their businesses and the acquisition of necessary permits.
                                 Returning owners have the convenience of paying their annual permit fees
                                 and receiving their permit documents instantly.</p>
-                            <a href="https://www.epermit.live"><i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://www.epermit.live"><i class="fas fa-external-link-alt">afw</i></a>
                         </div>
                     </div>
                 </div>

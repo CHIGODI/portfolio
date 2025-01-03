@@ -3,33 +3,47 @@ import ScrollLink from "../ScrollLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars, faX } from '@fortawesome/free-solid-svg-icons';
 import TypingAnimation from "../components/TypingAnimation";
+import { useState } from "react";
 
 const Nav = () => {
+    const [showMenu, setShowMenu] = useState(false);
+    const toggleMenu = () => {
+        setShowMenu((prevState) => !prevState);
+    };
+
+    const hideMenu = () => {
+        setShowMenu(false);
+    }
     return (
         <div id="header">
             <div className="navigation">
                 <nav>
-                    <h1 className="logo">ChigowDEV</h1>
-                    <ul id="menu">
-                        <li><ScrollLink to="header">Home</ScrollLink></li>
-                        <li><ScrollLink to="about">About</ScrollLink></li>
-                        <li><ScrollLink to="portfolio">Projects</ScrollLink></li>
-                        <li><ScrollLink to="projects">Skills</ScrollLink></li>
-                        <li><ScrollLink to="contact">Contact</ScrollLink></li>
+                    <div className="menu-toggle">
+                        <h1 className="logo">ChigowDEV</h1>
+                        <FontAwesomeIcon icon={faBars} className="menu-bars" onClick={toggleMenu} />
+                    </div>
+                    <ul id="menu" className={showMenu ? "show" : "hide"}>
+                        {console.log(showMenu)}
+                        <FontAwesomeIcon icon={faX} className="cancel" onClick={hideMenu} />
+                        <li><ScrollLink to="header">HOME</ScrollLink></li>
+                        <li><ScrollLink to="about">ABOUT</ScrollLink></li>
+                        <li><ScrollLink to="portfolio">PROJECTS</ScrollLink></li>
+                        <li><ScrollLink to="projects">SKILLS</ScrollLink></li>
+                        <li><ScrollLink to="contact">CONTACT</ScrollLink></li>
                     </ul>
                 </nav>
-                <div class="header-text">
+                <div className="header-text">
                     <h1>Hi, I'm Chigodi</h1>
-                    <TypingAnimation dataText={['Software Engineer']} />
+                    <TypingAnimation dataText={['Software Engineer', 'IT Support Specialist']} />
                     <p>Passionate about crafting<br /> innovative solutions</p>
                     <ScrollLink to="portfolio"><button className="cv">Explore Projects</button></ScrollLink>
                     <div className="action-icons">
-                        <a href="mailto:chiegody254@gmail.com"><FontAwesomeIcon icon={faEnvelope} className="header-icons" /></a>
-                        <a href="https://wa.me/+254708051357"><FontAwesomeIcon icon={faWhatsapp} className="header-icons" /></a>
-                        <a href="https://twitter.com/Chigow2"><FontAwesomeIcon icon={faTwitter} className="header-icons" /></a>
-                        <a href="https://www.linkedin.com/in/chigowdev/"><FontAwesomeIcon icon={faLinkedin} className="header-icons" /></a>
+                        <a href="mailto:chiegody254@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faEnvelope} className="header-icons" /></a>
+                        <a href="https://wa.me/+254708051357" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp} className="header-icons" /></a>
+                        <a href="https://twitter.com/Chigow2" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} className="header-icons" /></a>
+                        <a href="https://www.linkedin.com/in/chigowdev/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedin} className="header-icons" /></a>
                     </div>
                 </div>
             </div>

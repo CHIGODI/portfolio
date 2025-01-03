@@ -7,7 +7,7 @@ const About = () => {
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src={bgImage} alt="Chigodi's Image" />
+                        <img src={bgImage} alt="" />
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
@@ -15,7 +15,7 @@ const About = () => {
                             Hello, I'm Antony Aboud Chigodi, a Full-Stack Software Engineer from Nairobi, Kenya.
                             I specialize in backend development and have a passion for building REST APIs and deploying
                             scalable applications. My expertise includes Python with Flask/Django, JavaScript with Node.js,
-                            and web development technologies like HTML and CSS.
+                            and web development technologies like React and Nextjs.
                             I have hands-on experience with containerization using Docker, version control with Git, and Linux system administration.
                         </p>
                         <div class="tab-titles">

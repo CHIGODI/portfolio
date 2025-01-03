@@ -28,14 +28,32 @@ body {
     height: 70px;
 }
 
+.menu-toggle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;;
+}
+.menu-bars{
+    font-size: 1.5rem;
+    display: none;
+}
+.cancel{
+    font-size: 1.5rem;
+    display: none;
+    background-color: yellow;
+}
+#menu{
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
 .navigation nav{
     width: 80vw;
     height: 70px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.95);
     z-index: 1000;
     top: 0;
     left: 10%;
@@ -63,7 +81,7 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #161A30;
-    font-size: 18px;
+    font-size: 1rem;
     font-weight: 800px;
     position: relative;
     cursor: pointer;
@@ -365,10 +383,11 @@ nav ul li a:hover::after {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     grid-gap: 40px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .work {
+    background-color: green;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -555,9 +574,46 @@ nav .fa-solid {
     .action-icons{
         display: none;
     }
-    .navigation nav{
-        display: none;
+    .menu-toggle{
+        width: 100%;
+        padding: 0 5% 0 5%;
+        justify-content: space-between;
     }
+    #menu{
+        flex-direction: column;
+        gap: 2rem;
+        padding: 16% 0 0 0;
+        height: 100%;
+        position:fixed;
+        right: 0;
+        width: 70vw;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+        background-color: green;
+    }
+    .hide{
+        display: none !important;
+    }
+    .show{
+        display: flex !important;
+    }
+    .cancel{
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: block;
+    }
+    .menu-bars{
+        display: block;
+    }
+    .navigation nav{
+        width: 100vw;
+        left: 0;
+    }
+
+
     .header-text {
         display: flex;
         justify-content: center;
