@@ -1,40 +1,39 @@
 import React from "react";
-import hbnbImage from '../images/clone.png'
-import epermitImage from '../images/epermit.png'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
+import hbnbImage from '../images/clone.png';
+import epermitImage from '../images/epermit.png';
+import myBIZ from '../images/myBIZ.png';
 
 const Projects = () => {
     return (
         <div id="portfolio">
-            <div class="container">
-                <h1 class="sub-title">Projects</h1>
-                <p>My skills? Check out my recent work here</p>
-                <div class="work-list">
-                    <div class="work">
-                        <img src={hbnbImage} alt="Air BnB" />
-                        <div class="layer">
-                            <h3>AirBnB clone</h3>
-                            <p>This is a clone of the AirBnB. The project includes property listings,
-                                and search functionality, resulting
-                                in a robust simulation of the actual application</p>
-                            <a href="https://chigowdev.tech/hbnb_static/103-index.html"><FontAwesomeIcon icon="fa-solid fa-arrow-up-right-from-square" /></a>
-                        </div>
+            <div className="container">
+                <h1 className="sub-title">Projects</h1>
+                <p>My skills? Here are my recent works</p>
+                </div>
+            {/* Carousel Section */}
+            <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img  className="my-work-imgs" src={myBIZ} alt="epermit landing page" />
                     </div>
-                    <div class="work">
-                        <img src={ epermitImage } alt="epermit landing page" srcset="" />
-                        <div class="layer">
-                            <h3>ePermit Web App</h3>
-                            <p>ePermit is a platform for business owners to  simplify the registration
-                                process for their businesses and the acquisition of necessary permits.
-                                Returning owners have the convenience of paying their annual permit fees
-                                and receiving their permit documents instantly.</p>
-                            <a href="https://www.epermit.live"><i class="fas fa-external-link-alt">afw</i></a>
-                        </div>
+                    <div className="carousel-item">
+                        <img  className="my-work-imgs" src={epermitImage} alt="epermit landing page" />
+                    </div>
+                    <div className="carousel-item">
+                        <img className="my-work-imgs" src={hbnbImage} alt="epermit landing page" />
                     </div>
                 </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
             </div>
         </div>
     );
-}
+};
+
 export default Projects;
