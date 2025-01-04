@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHtml5, faPython, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
+import { faPython, faJs, faReact } from '@fortawesome/free-brands-svg-icons'
 import { faCode } from '@fortawesome/free-solid-svg-icons'
 
 const Skills = () => {
