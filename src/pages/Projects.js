@@ -1,5 +1,4 @@
 import React from "react";
-import hbnbImage from '../images/clone.png';
 import epermitImage from '../images/epermit.png';
 import myBIZ from '../images/myBIZ.png';
 
@@ -20,7 +19,18 @@ const Projects = () => {
                         <img  className="my-work-imgs" src={epermitImage} alt="epermit landing page" />
                     </div>
                     <div className="carousel-item">
-                        <img className="my-work-imgs" src={hbnbImage} alt="epermit landing page" />
+                        <div className="video-container">
+                            <iframe
+                                width="100%"
+                                height="400"
+                                src="https://www.youtube.com/embed/9ncSdWp3nqM
+"
+                                title="YouTube video"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
