@@ -19,10 +19,13 @@ const About = () => {
                             and web development technologies like React and Next.js.
                             I have hands-on experience with containerization using Docker, version control with Git, and Linux system administration.
                         </p>
-                        <div className="remote">Iam available for remote roles<div className="live"></div></div>
-                        <Link to="contact" smooth={true} duration={1000}>
-                            <button class="btn">Let's work</button>
-                        </Link>
+                        <div className="remote">
+                            <p>I am available for remote work across different time zones<span className="live"> </span></p>
+                            <Link to="contact" smooth={true} duration={1000}>
+                                <button class="btn">Let's work  </button>
+                            </Link>
+                        </div>
+
                     </div>
                 </div>
             </div>

@@ -47,6 +47,8 @@
 }
 
 body {
+    font-family: "Poppins", serif;
+    font-style: normal;
     background-color: var(--background-color);
     color: var(--text-color);
     transition: background-color 0.3s, color 0.3s;
@@ -319,19 +321,28 @@ nav ul li a:hover::after {
     color:var(--text-subtitle);
 }
 .remote{
-    width: 50%;
+    border-radius: 1rem;
+    width: 100%;
     padding: 1rem;
     border: var(--border-color) 1px solid;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    gap: 1rem;
-    background-color: var(--background-color);
+    justify-content: space-between;
+    background-color: var(--card-background);
+}
+.remote p{
+    text-align: center;
+}
+.remote .btn{
+    margin: 0;
 }
 .live {
+    margin-left: 0.5rem;
+    display: inline-block;
     border-radius: 50%;
-    height: 1rem;
-    width: 1rem;
+    height: 10px;
+    width: 10px;
     background-color: #228B22;
     animation: blink 1s infinite;
 }
