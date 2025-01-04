@@ -80,6 +80,7 @@ html {
     align-items: center;;
 }
 .menu-bars{
+    color: var(--primary-color);
     font-size: 1.5rem;
     display: none;
 }
@@ -643,6 +644,11 @@ nav .fa-solid {
 }
 
 @media only screen and (max-width: 768px) {
+    .navigation nav{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     #header,
     #about,
     #projects,
@@ -662,6 +668,7 @@ nav .fa-solid {
         justify-content: space-between;
     }
     #menu{
+        background-color: whitesmoke;
         flex-direction: column;
         gap: 2rem;
         padding: 16% 0 0 0;
@@ -693,22 +700,31 @@ nav .fa-solid {
         width: 100vw;
         left: 0;
     }
-
+  #header {
+      background-image: url('/src/images/download.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
 
     .header-text {
+        padding: 0 2% 0 2%;
         display: flex;
         justify-content: center;
         width: 100vw;
-        font-size: 16px;
+        font-size: 1rem;
     }
     .header-text p{
+        text-shadow: var(--shadow-color)2px 2px 5px;
         margin: 0;
         font-size: 20px;
     }
     .header-text h1 {
+        text-shadow: var(--shadow-color)2px 2px 5px;
         font-size: 48px;
     }
     .header-text #title{
+        color: #FF5722;
+        text-shadow: var(--shadow-color)2px 2px 5px;
         font-size: 32px;
     }
 
