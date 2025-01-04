@@ -2,8 +2,16 @@
     --background-color: #121212;
     /* Main background */
     --text-color-main: #ffffff;
+    --text-hero: #FFFFFF;
+    /* Hero text - Pure white */
+    --text-subtitle: #E0E0E0;
+    /* Subtitles - Softer white */
+    --text-paragraph: #BDBDBD;
+    /* Paragraph text - Light gray */
+    --text-muted: #9E9E9E;
+    /* Muted/Secondary text - Muted gray */
+    --text-dark-muted: #757575;
     /* Primary text color */
-    --text-muted: #b3b3b3;
     /* Muted/secondary text */
 
     --primary-color: #8a2be2;
@@ -269,11 +277,11 @@ nav ul li a:hover::after {
 }
 
 #about h1{
-    color: #31304D;
+    color: var(--text-subtitle);
 }
 
 #about p {
-    color: #808080;
+    color: var(--text-muted);
     padding: 10px;
     font-size: 18px;
 }
@@ -308,8 +316,38 @@ nav ul li a:hover::after {
     margin: 20px 0 0px;
 }
 #about .tab-links{
-    color: #31304D;
+    color:var(--text-subtitle);
 }
+.remote{
+    width: 50%;
+    padding: 1rem;
+    border: var(--border-color) 1px solid;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--background-color);
+}
+.live {
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+    background-color: #228B22;
+    animation: blink 1s infinite;
+}
+
+/* Keyframes for Blinking Effect */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1; /* Fully visible */
+        transform: scale(1); /* Normal size */
+    }
+    50% {
+        opacity: 0.5; /* Slightly transparent */
+        transform: scale(0.8); /* Slightly smaller */
+    }
+}
+
 
 .tab-contents{
     height: 40%;

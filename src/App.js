@@ -5,9 +5,7 @@ import Skills from "./pages/Skills";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
-import Counter from "./components/Counter";
-import TypingAnimation from "./components/TypingAnimation";
-
+import Work from "./pages/Work";
 
 
 class App extends React.Component {
@@ -18,8 +16,9 @@ class App extends React.Component {
                 <About />
                 <Skills />
                 <Projects />
+                <Work />
                 <Contact />
-                <Footer /> 
+                <Footer />
             </>
         );
     }
