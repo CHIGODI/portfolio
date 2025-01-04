@@ -1,6 +1,5 @@
 import React from "react";
 import epermitImage from '../images/epermit.png';
-import myBIZ from '../images/myBIZ.png';
 
 const Projects = () => {
     return (
@@ -13,7 +12,18 @@ const Projects = () => {
             <div id="myCarousel" className="carousel slide" data-bs-ride="false">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                        <img  className="my-work-imgs" src={myBIZ} alt="epermit landing page" />
+                        <div className="video-container">
+                            <iframe
+                                width="100%"
+                                height="400"
+                                src="https://www.youtube.com/embed/_SgQ1aFinpE
+"
+                                title="YouTube video"
+                                frameBorder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            ></iframe>
+                        </div>
                     </div>
                     <div className="carousel-item">
                         <img  className="my-work-imgs" src={epermitImage} alt="epermit landing page" />
