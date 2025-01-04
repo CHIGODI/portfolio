@@ -13,7 +13,7 @@ const About = () => {
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
                         <p>
-                            Hello, I'm Antony Aboud Chigodi, a Full-Stack Software Engineer from Nairobi, Kenya.
+                            I am Antony Aboud Chigodi, a Full-Stack Software Engineer based in Mombasa, Kenya.
                             I specialize in backend development and have a passion for building REST APIs and deploying
                             scalable applications. My expertise includes Python with Flask/Django, JavaScript with Node.js,
                             and web development technologies like React and Next.js.
