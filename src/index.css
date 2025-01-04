@@ -377,12 +377,15 @@ nav ul li a:hover::after {
     font-weight: 400px;
 }
 
-/* --------projects----------- */
+/* --------skills----------- */
 #projects {
+    padding: 0.5rem;
     width: 80vw;
-    height: 100vh;
-    margin: 124px auto 0 auto;
+    height: auto;
+    margin: 2rem auto 0 auto;
+    background-color: var(--card-background);
 }
+
 #projects .container {
     width: 100%;
     display: flex;
@@ -391,7 +394,7 @@ nav ul li a:hover::after {
 }
 
 #projects h2{
-    color: #31304D;
+    color: var(--text-subtitle);
     font-size: 36px;
     text-align: center;
 }
@@ -408,14 +411,19 @@ nav ul li a:hover::after {
     align-items:center;
     justify-content: center;
 }
+
 .ln-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     height: 12vh;
+    text-align: center;
     width: 80%;
 }
 
 .ln-title h3 {
-    color: #31304D;
-    font-size: 22px;
+    color: var(--primary-color);
+    font-size: 1.32rem;
 }
 
 .ln-title p{
@@ -432,14 +440,14 @@ nav ul li a:hover::after {
 }
 
 #ln-tiles h4{
-    color: #31304D;
+    color: var(--primary-color);
     position: absolute;
     top: 0;
     right: 0;
 }
 #ln-tiles::after{
     content: '';
-    background-color: purple;
+    background-color: var(--primary-color);
     position: absolute;
     bottom: 0;
     border-radius: 16px;
@@ -448,6 +456,7 @@ nav ul li a:hover::after {
 }
 
 .ln-icons{
+    color: var(--text-dark-muted);
     font-size: 36px;
 }
 
@@ -703,7 +712,8 @@ nav .fa-solid {
     #projects,
     #portfolio,
     #contact,
-    #copyright
+    #copyright,
+    .ln-tiles
     {
         width: 100vw;
         margin: auto auto;
@@ -790,20 +800,36 @@ nav .fa-solid {
         font-size: 14px;
     }
     #projects{
-        margin-bottom: 36rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
     #projects .container{
         display: flex;
         flex-wrap: wrap;
+        background-color: var(--card-background);
         height: fit-content;
     }
+
     .languages,
     .tools{
+        height: auto;
         flex-basis: 100%;
+        justify-content: center;
     }
-
+    .tools{
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .ln-title h3, .ln-title p{
+        text-align: center;
+    }
+    #ln-tiles{
+        padding: 0;
+        width: 90%;
+    }
     #portfolio{
-        margin-top: 400px;
+        margin-top: 2rem;
+
     }
     #contact{
         width: 100vw;
