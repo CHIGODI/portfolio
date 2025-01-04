@@ -2,8 +2,8 @@ import React from "react";
 import ScrollLink from "../ScrollLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faBars, faX, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faLinkedin,  } from '@fortawesome/free-brands-svg-icons';
+import { faEnvelope, faBars, faX, faArrowUpRightFromSquare, faCopy } from '@fortawesome/free-solid-svg-icons';
 import TypingAnimation from "../components/TypingAnimation";
 import { useState } from "react";
 
