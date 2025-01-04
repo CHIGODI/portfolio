@@ -10,7 +10,7 @@ const Projects = () => {
                 <p>My skills? Here are my recent works</p>
                 </div>
             {/* Carousel Section */}
-            <div id="myCarousel" className="carousel slide" data-bs-ride="carousel">
+            <div id="myCarousel" className="carousel slide" data-bs-ride="false">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img  className="my-work-imgs" src={myBIZ} alt="epermit landing page" />
