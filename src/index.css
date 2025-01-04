@@ -96,6 +96,7 @@ html {
 }
 .cancel{
     font-size: 1.5rem;
+    color: var(--text-color-main);
     display: none;
 }
 #menu{
@@ -811,7 +812,7 @@ nav .fa-solid {
         justify-content: space-between;
     }
     #menu{
-        background-color: whitesmoke;
+        background-color: var(--card-background);
         flex-direction: column;
         gap: 2rem;
         padding: 16% 0 0 0;
