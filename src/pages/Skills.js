@@ -25,7 +25,7 @@ const Skills = () => {
                         <h4>React</h4>
                     </div>
                     <div id="ln-tiles">
-                        <FontAwesomeIcon icon={faJs} className="ln-icons" />
+                        <FontAwesomeIcon icon={faPython} className="ln-icons" />
                         <h4>Django</h4>
                     </div>
                     <div id="ln-tiles">
