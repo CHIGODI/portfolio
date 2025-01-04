@@ -539,6 +539,65 @@ nav ul li a:hover::after {
     justify-content: center;
     align-items: center;
 }
+
+
+/* -- work experience--- */
+.work-experience {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    background-color: #1e1e1e;
+    /* Slightly lighter background for cards */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /* Circular logo */
+    object-fit: cover;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.details h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.position {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #ccc;
+    /* Light gray for position details */
+}
+
+.description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #bbb;
+    /* Slightly darker gray for description */
+}
 .work-list {
     background-color: red;
     display: grid;

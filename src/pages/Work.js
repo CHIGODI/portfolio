@@ -1,10 +1,14 @@
+import fobros from '../images/fobros.jpg';
+import equip from '../images/equip.jpg';
+
 const Work = () => {
     return(
         <>
             <div class="work-experience">
+                <h6 class="sub-title">Work Experience</h6>
                 <div class="experience-card">
                     <div class="logo">
-                        {/* <img src="path-to-nupat-logo.png" alt="FobrosTechnologies Logo"> */}
+                        <img className="my-work-imgs" src={fobros} alt="epermit landing page" />
                     </div>
                     <div class="details">
                         <h3>Fobros Technologies</h3>
@@ -21,7 +25,7 @@ const Work = () => {
 
                 <div class="experience-card">
                     <div class="logo">
-                        {/* <img src="path-to-Equip Africa-logo.png" alt="Equip Africa Logo"> */}
+                        <img className="my-work-imgs" src={equip} alt="epermit landing page" />
                     </div>
                     <div class="details">
                         <h3>Equip Africa Institute</h3>
