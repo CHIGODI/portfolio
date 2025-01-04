@@ -3,15 +3,12 @@ import ScrollLink from "../ScrollLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faTwitter, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faEnvelope, faBars, faX } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faBars, faX, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons';
 import TypingAnimation from "../components/TypingAnimation";
 import { useState } from "react";
-import { useEffect } from "react";
 
 const Nav = () => {
     const [showMenu, setShowMenu] = useState(false);
-    const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
-
     const toggleMenu = () => {
         setShowMenu((prevState) => !prevState);
     };
@@ -19,16 +16,6 @@ const Nav = () => {
     const hideMenu = () => {
         setShowMenu(false);
     };
-
-    const toggleTheme = () => {
-        const newTheme = theme === "light" ? "dark" : "light";
-        setTheme(newTheme);
-        localStorage.setItem("theme", newTheme);
-    };
-
-    useEffect(() => {
-        document.documentElement.setAttribute("data-theme", theme);
-    }, [theme]);
 
     return (
         <div id="header">
@@ -45,16 +32,13 @@ const Nav = () => {
                         <li onClick={hideMenu}><ScrollLink to="portfolio">PROJECTS</ScrollLink></li>
                         <li onClick={hideMenu}><ScrollLink to="projects">SKILLS</ScrollLink></li>
                         <li onClick={hideMenu}><ScrollLink to="contact">CONTACT</ScrollLink></li>
-                        <button onClick={toggleTheme} className="theme-toggle">
-                            {theme === "light" ? "🌙" : "☀️"}
-                        </button>
                     </ul>
                 </nav>
                 <div className="header-text">
                     <h1>Hi, I'm Antony <span className="wave">👋🏽</span></h1>
                     <TypingAnimation dataText={['Software Engineer', 'Python Developer ⌨️']} />
-                    <p>Passionate about crafting<br /> innovative solutions</p>
-                    <ScrollLink to="portfolio"><button className="explore">Explore Projects</button></ScrollLink>
+                    <p>passionate about crafting<br /> innovative solutions</p>
+                    <ScrollLink to="portfolio"><button className="explore">Explore Projects <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></ScrollLink>
                     <div className="action-icons">
                         <a href="mailto:chiegody254@gmail.com" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faEnvelope} className="header-icons" /></a>
                         <a href="https://wa.me/+254708051357" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faWhatsapp} className="header-icons" /></a>

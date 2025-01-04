@@ -1,18 +1,41 @@
 :root {
-    --background-color: #ffffff;
-    --text-color-main: #161A30;
-    --header-background: #f5f5f5;
-    --button-background: purple;
-    --button-text-color: #ffffff;
-}
-
-[data-theme="dark"] {
-    --text-color-main: #ffffff;
     --background-color: #121212;
-    --text-color: #ffffff;
+    /* Main background */
+    --text-color-main: #ffffff;
+    /* Primary text color */
+    --text-muted: #b3b3b3;
+    /* Muted/secondary text */
+
+    --primary-color: #8a2be2;
+    /* Purple primary (Electric Purple) */
+    --primary-hover: #a855f7;
+    /* Hover effect for purple elements */
+    --secondary-color: #6d28d9;
+    /* Darker shade of purple for accents */
+    --highlight-color: #c084fc;
+    /* Light purple for highlights (buttons, links, etc.) */
+
     --header-background: #1f1f1f;
+    /* Header/nav background */
     --button-background: #333333;
+    /* Button background */
+    --button-hover: #6d28d9;
+    /* Button hover (matches secondary purple) */
     --button-text-color: #ffffff;
+    /* Button text color */
+
+    --card-background: #1a1a1a;
+    /* Background for cards/containers */
+    --border-color: #292929;
+    /* Subtle borders for sections/cards */
+
+    --link-color: #8a2be2;
+    /* Links in purple */
+    --link-hover: #c084fc;
+    /* Link hover (light purple) */
+
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    /* Box shadow for depth */
 }
 
 body {
@@ -22,6 +45,7 @@ body {
 }
 
 button {
+    background-color: var(--background-color);
     color: var(--button-text-color);
     border: none;
     cursor: pointer;
@@ -70,15 +94,18 @@ html {
 }
 
 .navigation nav{
-    width: 80vw;
+    background-color: var(--background-color);
+    width: 100vw;
+    padding-left: 10%;
+    padding-right: 10%;
     height: 70px;
     display: flex;
     justify-content: space-between;
     position: fixed;
+    left: 0;
     z-index: 1000;
     top: 0;
-    left: 10%;
-    border-bottom: 1px solid #DDDDDD;
+    box-shadow: var(--shadow-color) 0 0 0.5px;
 }
 
 #contact .container {
@@ -87,13 +114,14 @@ html {
 
 .logo {
     font-size: 24px;
-    color: hsl(var(--hue-color), 8%, 15%);
+    color: var(--primary-color)
 }
 .logo:hover{
     cursor: pointer;
 }
 
 nav ul li {
+    color: var(--link-color);
     display: inline-block;
     list-style: none;
     margin: 10px 10px;
@@ -101,7 +129,6 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #161A30;
     font-size: 1rem;
     font-weight: 800px;
     position: relative;
@@ -176,12 +203,12 @@ nav ul li a:hover::after {
 
 .header-icons {
     font-size: 24px;
-    color: #555555;
+    color: var(--button-text-color);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .header-icons:hover {
-    color: purple;
+    color: var(--button-hover);
     transform: scale(1.2);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
@@ -192,23 +219,25 @@ nav ul li a:hover::after {
 
 
 .header-text h1 {
-    font-size: 60px;
+    font-size: 4.5rem;
     margin-top: 20px;
     text-align: center;
-    color: var(--text-color-main)
+    color: var(--text-color-main);
 }
 .header-text p{
-    color: #808080;
-    font-size: 24px;
-    padding: 10px;
+    color: var(--text-muted);
+    font-size: 1.25rem;
+    padding: 1rem;
     text-align: center;
 }
 .title{
+    margin-bottom: 1.5rem;
     height: 3.5em;
 }
 .header-text #title{
-    color: #31304D;
-    font-size: 40px;
+    padding: 1rem;
+    color: var(--secondary-color);
+    font-size: 2.5rem;
 
 }
 
