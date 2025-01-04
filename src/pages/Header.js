@@ -22,7 +22,7 @@ const Nav = () => {
             <div className="navigation">
                 <nav>
                     <div className="menu-toggle">
-                        <h1 className="logo">ChigowDEV</h1>
+                        <h1 className="main-logo">ChigowDEV</h1>
                         <FontAwesomeIcon icon={faBars} className="menu-bars" onClick={toggleMenu} />
                     </div>
                     <ul id="menu" className={showMenu ? "show" : "hide"}>
