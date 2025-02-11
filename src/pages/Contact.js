@@ -29,6 +29,7 @@ const Contact = () => {
             toast.error("All fields are required!");
             return;
         }
+
         const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!emailRegex.test(FormData.Email)) {
             toast.error("Please enter a valid email address.");
