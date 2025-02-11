@@ -29,7 +29,7 @@ const Work = () => {
                         <h3>The New Dimension College</h3>
                         <p class="position">Software Engineering Istructor -- 2025</p>
                         <p class="description">
-                            AMentored software engineering students and provided foundational training in software development. Focused on building a strong understanding of computer science fundamentals and fostering a culture of self-learning.
+                            Mentored software engineering students and provided foundational training in software development. Focused on building a strong understanding of computer science fundamentals and fostering a culture of self-learning.
                         </p>
                     </div>
                 </div>
