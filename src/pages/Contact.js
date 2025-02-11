@@ -19,28 +19,15 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzU4VoYO8AEpkAPoVjZDvXqoQKcbtqM7qn4uk94P19KLIYGKMPid3DXUvqGn0P7qeg/exec'
+    const form = document.forms['submit-to-google-sheet']
 
-        const scriptURL = "https://script.google.com/macros/s/AKfycbzwKXCblReSqQ4MQE7QaVFPeqHGpphye6Oynadnx6ohjO01U3F6n1uhSIJAnMU19L3V/exec";
-
-        try {
-            let response = await fetch(scriptURL, {
-                method: "POST",
-                body: JSON.stringify(formData),
-                headers: { "Content-Type": "application/json" },
-            });
-
-            if (response.ok) {
-                setMsg("Message sent successfully!");
-                setFormData({ Name: "", Email: "", Message: "" });
-            } else {
-                setMsg("Error sending message. Try again.");
-            }
-        } catch (error) {
-            setMsg("Network error. Try again later.");
-        }
-    };
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+    })
 
     return (
         <div id="contact">
@@ -60,7 +47,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <div className="contact-right">
-                        <form onSubmit={handleSubmit}>
+                        <form name="submit-to-google-sheet" method="POST">
                             <input type="text" name="Name" placeholder="Your Name" value={formData.Name} onChange={handleChange} required />
                             <input type="email" name="Email" placeholder="Email" value={formData.Email} onChange={handleChange} required />
                             <textarea name="Message" rows="6" placeholder="Your Message" value={formData.Message} onChange={handleChange}></textarea>
