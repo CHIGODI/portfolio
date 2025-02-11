@@ -6,6 +6,8 @@ import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Work from "./pages/Work";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 class App extends React.Component {
@@ -19,6 +21,7 @@ class App extends React.Component {
                 <Work />
                 <Contact />
                 <Footer />
+                <ToastContainer />
             </>
         );
     }
