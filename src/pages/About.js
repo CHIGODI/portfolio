@@ -13,11 +13,9 @@ const About = () => {
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
                         <p>
-                            I am Antony Aboud Chigodi, a Full-Stack Software Engineer based in Mombasa, Kenya.
-                            I specialize in backend development and have a passion for building REST APIs and deploying
-                            scalable applications. My expertise includes Python with Flask/Django, JavaScript with Node.js,
-                            and web development technologies like React and Next.js.
-                            I have hands-on experience with containerization using Docker, version control with Git, and Linux system administration.
+                            I am a Full-Stack Software Engineer based in Mombasa, Kenya, with a strong foundation in computer science fundamentals and the ability to quickly learn and adapt to new technologies. I specialize in backend development, building REST APIs, and deploying scalable applications. My expertise includes Python (Flask/Django), JavaScript (Node.js), and modern web development frameworks like React and Next.js.
+
+                            Beyond software engineering, I have a diverse IT skill set, including IT support, networking, and system administration. I am proficient in containerization with Docker, version control with Git, and Linux system management, ensuring seamless development and deployment processes.
                         </p>
                         <div className="remote">
                             <p>I am available for remote work across different time zones<span className="live"> </span></p>

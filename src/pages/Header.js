@@ -36,7 +36,7 @@ const Nav = () => {
                 </nav>
                 <div className="header-text">
                     <h1>Hi, I'm Antony <span className="wave">👋🏽</span></h1>
-                    <TypingAnimation dataText={['Software Engineer', 'Python Developer ⌨️']} />
+                    <TypingAnimation dataText={['Software Engineer', 'IT Specialist ⌨️']} />
                     <p>passionate about crafting<br /> innovative solutions</p>
                     <ScrollLink to="portfolio"><button className="explore">Explore Projects <FontAwesomeIcon icon={faArrowUpRightFromSquare} /></button></ScrollLink>
                     <div className="action-icons">

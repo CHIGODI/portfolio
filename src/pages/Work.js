@@ -1,24 +1,35 @@
-import fobros from '../images/fobros.jpg';
+import mtreat from '../images/logo-mtreat.jpg';
 import equip from '../images/equip.jpg';
+import tndc from '../images/tndc-logo-2-2.png';
 
 const Work = () => {
     return(
         <>
             <div class="work-experience">
                 <h6 class="sub-title">Work Experience</h6>
+
                 <div class="experience-card">
                     <div class="logo">
-                        <img className="my-work-imgs" src={fobros} alt="epermit landing page" />
+                        <img className="my-work-imgs" src={mtreat} alt="epermit landing page" />
                     </div>
                     <div class="details">
-                        <h3>Fobros Technologies</h3>
-                        <p class="position">Front-End Developer -- 2023 - Present</p>
+                        <h3>M-TREAT</h3>
+                        <p class="position">Full-Stack Software Engineer -- 2023 - Present</p>
                         <p class="description">
-                            As a Front-End Developer at FobrosTechnologies, I lead a team in designing and
-                            developing user-centric web applications using React, Next.js, and modern
-                            front-end technologies. I collaborate closely with cross-functional teams to
-                            deliver high-quality digital solutions, ensuring seamless integration with
-                            backend services like Supabase.
+                            Designed and developed the frontend using React.js and MUI, ensuring reusable components and clean code. Integrated and debugged backend services written in Django to enhance functionality and performance..
+                        </p>
+                    </div>
+                </div>
+
+                <div class="experience-card">
+                    <div class="logo">
+                        <img className="my-work-imgs" src={tndc} alt="epermit landing page" />
+                    </div>
+                    <div class="details">
+                        <h3>The New Dimension College</h3>
+                        <p class="position">Software Engineering Istructor -- 2025</p>
+                        <p class="description">
+                            AMentored software engineering students and provided foundational training in software development. Focused on building a strong understanding of computer science fundamentals and fostering a culture of self-learning.
                         </p>
                     </div>
                 </div>
@@ -29,13 +40,9 @@ const Work = () => {
                     </div>
                     <div class="details">
                         <h3>Equip Africa Institute</h3>
-                        <p class="position">Web Developer -- 2019 - 2023</p>
+                        <p class="position">ICT Trainer -- 2023</p>
                         <p class="description">
-                            As a Front-End Developer at Equip Africa, I specialized in designing and developing
-                            seamless, responsive web applications and websites utilizing React. My role
-                            involved creating user-friendly interfaces that ensure optimal user experience
-                            across various devices and platforms, contributing significantly to the
-                            enhancement of Equip Africa's digital presence.
+                            Trained students in databases (MySQL, MS Access), ICT security, and digital literacy. Developed strong communication skills and the ability to simplify complex concepts for effective learning.
                         </p>
                     </div>
                 </div>
